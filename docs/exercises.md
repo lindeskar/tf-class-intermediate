@@ -1,6 +1,8 @@
 # Exercises
 
-## 00-setup
+Exercise contents will be added to `e<n>.tf` files.
+
+## 00 - Setup
 
 Install and enable dependencies:
 - [gcloud CLI](https://cloud.google.com/sdk/docs/install)
@@ -33,7 +35,14 @@ Apply config to enable APIs:
 terraform apply
 ```
 
-# 01-bucket
+## 01 - Bucket
 
-## Create a bucket
-Add a bucket in GCS using `google_storage_bucket`.
+Add a GCS bucket in using `google_storage_bucket`.
+
+## 02 - Variable
+
+Add a variable to store your name using `variable`.
+
+## 03 - Bucket object
+
+Add file with your name from step 02 to the bucket from step 01 using `google_storage_bucket_object`.
