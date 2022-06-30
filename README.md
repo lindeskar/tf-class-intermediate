@@ -83,3 +83,13 @@ Add a data resource using `terraform_remote_state` to get and output a value fro
 ### 05 - Add alternate provider
 
 Add an alternate provider with a different default project, and create a bucket using it.
+
+### 06a - Create a module
+
+Add a module with input variables to create some objects.
+
+### 06b - Create a webserver
+
+- Provision an instance using `google_compute_instance`
+- Open for access from public Internet
+- Install nginx on the webserver

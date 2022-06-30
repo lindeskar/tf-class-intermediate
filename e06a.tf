@@ -1,4 +1,4 @@
-# Exercise 06
+# Exercise 06a
 
 module "e06" {
   source          = "./src/e06/modules/gcs_bucket_and_obj"
