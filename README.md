@@ -66,3 +66,9 @@ Add a variable to store your name using `variable`.
 ### 03 - Bucket object
 
 Add file with your name from step 02 to the bucket from step 01 using `google_storage_bucket_object`.
+
+### 04 - Remote state
+
+*(note about 04a: remote state bucket for this project was added in step 00)*
+
+Add a data resource using `terraform_remote_state` to get and output a value from an other Terraform project.
