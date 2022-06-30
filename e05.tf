@@ -1,21 +1,23 @@
 # Exercise 05
 
-variable "google_region_alt" {
-  type    = string
-  default = "europe-west1"
+resource "google_project" "e05" {
+  name            = "${var.google_project}-e05"
+  project_id      = "${var.google_project}-e05"
+  org_id          = var.google_org_id
+  billing_account = var.google_billing_id
 }
 
 provider "google" {
   alias   = "alternate"
-  project = var.google_project
-  region  = var.google_region_alt
+  project = google_project.e05.name
+  region  = var.google_region
   zone    = var.google_zone
 }
 
 resource "google_storage_bucket" "e05" {
-  name                        = "${var.google_project}-e05"
-  provider                    = google.alternate # Does not make sense because `location` must be set
-  location                    = var.google_region_alt
+  name                        = "${google_project.e05.name}-alt"
+  provider                    = google.alternate
+  location                    = var.google_region
   force_destroy               = true
   uniform_bucket_level_access = true
 }

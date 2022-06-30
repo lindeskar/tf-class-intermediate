@@ -45,6 +45,13 @@ gsutil mb -b on -l europe-west4 gs://tf-class-intermediate-state
 ```
 Add bucket name to backend configuration in `terraform.tf`.
 
+Add overrides for your project and organization in a new file `override.auto.tf`. Example content:
+```
+google_org_id     = "0123456789"
+google_billing_id = "012345A-B45678-987654"
+google_project    = "my-class-project1234"
+```
+
 Initialize Terraform:
 ```
 terraform init
@@ -75,4 +82,4 @@ Add a data resource using `terraform_remote_state` to get and output a value fro
 
 ### 05 - Add alternate provider
 
-Add an alternate provider with a different region set, and create a resource using it. *(Exercise does not make sense for GCP, as this only sets the __default__ region.)*
+Add an alternate provider with a different default project, and create a bucket using it.

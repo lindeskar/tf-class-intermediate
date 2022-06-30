@@ -1,8 +1,10 @@
 # terraform.tfvars
 
-google_project = "tf-class-intermediate"
-google_region  = "europe-west4"
-google_zone    = "europe-west4-b"
+google_org_id     = "0123456789"
+google_billing_id = "012345A-B45678-987654"
+google_project    = "my-class-project1234"
+google_region     = "europe-west4"
+google_zone       = "europe-west4-b"
 
 google_project_apis = [
   "compute.googleapis.com",

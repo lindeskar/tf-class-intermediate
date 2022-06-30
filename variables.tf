@@ -1,5 +1,13 @@
 # variables.tf
 
+variable "google_org_id" {
+  type = string
+}
+
+variable "google_billing_id" {
+  type = string
+}
+
 variable "google_project" {
   type = string
 }
