@@ -1,6 +1,8 @@
-# 00-setup
+# Exercises
 
-## Install and enable dependencies
+## 00-setup
+
+Install and enable dependencies:
 - [gcloud CLI](https://cloud.google.com/sdk/docs/install)
 - [Terraform](https://www.terraform.io/downloads)
 
@@ -17,7 +19,7 @@ gcloud auth application-default login
 
 Create state bucket:
 ```
-gsutil mb gs://tf-class-intermediate
+gsutil mb -b on -l europe-west4 gs://tf-class-intermediate-state
 ```
 Add bucket name to backend configuration in `terraform.tf`.
 
@@ -30,3 +32,8 @@ Apply config to enable APIs:
 ```
 terraform apply
 ```
+
+# 01-bucket
+
+## Create a bucket
+Add a bucket in GCS using `google_storage_bucket`.

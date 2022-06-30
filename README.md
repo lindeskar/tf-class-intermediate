@@ -1,6 +1,6 @@
 # tf-class-intermediate
 
-See [exercises](./exercises) for steps followed during the class.
+See [exercises](./docs/exercises.md) for steps followed during the class.
 
 ## Using Terraform
 
