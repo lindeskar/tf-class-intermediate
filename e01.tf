@@ -1,3 +1,5 @@
+# Exercise 01
+
 resource "google_storage_bucket" "e01" {
   name                        = "${var.google_project}-e01"
   location                    = var.google_region

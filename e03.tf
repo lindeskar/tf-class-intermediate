@@ -1,3 +1,5 @@
+# Exercise 03
+
 resource "google_storage_bucket_object" "e03" {
   bucket  = google_storage_bucket.e01.name
   name    = "student.alias"
