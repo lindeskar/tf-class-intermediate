@@ -1,4 +1,4 @@
-# tf-class-intermediate
+# Intermediate Terraform class
 
 Exercises in Terraform adjusted for GCP. Original class repo: [jwkidd3/terraform](https://github.com/jwkidd3/terraform).
 
@@ -30,7 +30,7 @@ Install and enable dependencies:
 
 Configure gcloud CLI:
 ```
-gcloud config configurations create tf-class-intermediate
+gcloud config configurations create my-class-project1234
 gcloud init
 ```
 
@@ -41,9 +41,18 @@ gcloud auth application-default login
 
 Create state bucket:
 ```
-gsutil mb -b on -l europe-west4 gs://tf-class-intermediate-state
+gsutil mb -b on -l europe-west4 gs://my-class-project1234-state
 ```
-Add bucket name to backend configuration in `terraform.tf`.
+
+Add bucket name to backend configuration in a new file `override.tf`. Example content:
+```
+terraform {
+  backend "gcs" {
+    bucket = "my-class-project1234-state"
+    prefix = "terraform/tfstate"
+  }
+}
+```
 
 Add overrides for your project and organization in a new file `override.auto.tf`. Example content:
 ```
