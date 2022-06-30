@@ -67,8 +67,12 @@ Add a variable to store your name using `variable`.
 
 Add file with your name from step 02 to the bucket from step 01 using `google_storage_bucket_object`.
 
-### 04 - Remote state
+### 04 - Query remote state
 
 *(note about 04a: remote state bucket for this project was added in step 00)*
 
 Add a data resource using `terraform_remote_state` to get and output a value from an other Terraform project.
+
+### 05 - Add alternate provider
+
+Add an alternate provider with a different region set, and create a resource using it. *(Exercise does not make sense for GCP, as this only sets the __default__ region.)*
