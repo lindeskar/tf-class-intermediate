@@ -1,6 +1,6 @@
 # tf-class-intermediate
 
-See [exercises](./docs/exercises.md) for steps followed during the class.
+Exercises in Terraform adjusted for GCP. Original class repo: [jwkidd3/terraform](https://github.com/jwkidd3/terraform).
 
 ## Using Terraform
 
