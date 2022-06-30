@@ -16,3 +16,27 @@ resource "google_compute_project_metadata_item" "default" {
   key        = each.key
   value      = each.value
 }
+
+## VPC
+resource "google_compute_network" "primary" {
+  name                    = "${var.google_project}-primary"
+  auto_create_subnetworks = false
+  routing_mode            = "GLOBAL"
+}
+
+resource "google_compute_subnetwork" "default" {
+  name          = "${google_compute_network.primary.name}-${var.google_region}"
+  network       = google_compute_network.primary.name
+  region        = var.google_region
+  ip_cidr_range = "10.11.12.0/24"
+}
+
+resource "google_compute_firewall" "iap_ssh" {
+  name    = "ssh-from-iap"
+  network = google_compute_network.primary.name
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
+  }
+  source_ranges = ["35.235.240.0/20"]
+}

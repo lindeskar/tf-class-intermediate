@@ -1,10 +1,11 @@
 # Exercise 05
 
 resource "google_project" "e05" {
-  name            = "${var.google_project}-e05"
-  project_id      = "${var.google_project}-e05"
-  org_id          = var.google_org_id
-  billing_account = var.google_billing_id
+  name                = "${var.google_project}-e05"
+  project_id          = "${var.google_project}-e05"
+  org_id              = var.google_org_id
+  billing_account     = var.google_billing_id
+  auto_create_network = false
 }
 
 provider "google" {
