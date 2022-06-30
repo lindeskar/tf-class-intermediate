@@ -2,9 +2,10 @@
 
 ## APIs
 resource "google_project_service" "default" {
-  for_each = toset(var.google_project_apis)
-  project  = var.google_project
-  service  = each.key
+  for_each           = toset(var.google_project_apis)
+  project            = var.google_project
+  service            = each.key
+  disable_on_destroy = false
 }
 
 ## Metadata
