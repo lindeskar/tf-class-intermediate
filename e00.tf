@@ -1,4 +1,4 @@
-# main.tf
+# Exercise 00
 
 ## APIs
 resource "google_project_service" "default" {
