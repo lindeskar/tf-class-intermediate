@@ -102,3 +102,11 @@ Add a module with input variables to create some objects.
 - Provision an instance using `google_compute_instance`
 - Open for access from public Internet
 - Install nginx on the webserver
+
+### 07 - Error handling
+
+Try generating errors:
+- Process error - running `terraform` commands in the wrong order
+- Syntax errors - modify the code to generate syntax errors
+- Validation errors - refer to an invalid resource
+- Provider errors - ex. write file to a bucket that does not exist
