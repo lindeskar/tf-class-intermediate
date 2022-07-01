@@ -3,6 +3,11 @@ resource "google_service_account" "nginx" {
   display_name = "${var.name_prefix}-nginx"
 }
 
+data "google_compute_image" "nginx" {
+  family  = "centos-7"
+  project = "centos-cloud"
+}
+
 resource "google_compute_instance" "nginx" {
   count                     = var.server_count
   name                      = "${var.name_prefix}-nginx-${var.server_count}"
@@ -12,7 +17,7 @@ resource "google_compute_instance" "nginx" {
 
   boot_disk {
     initialize_params {
-      image = "centos-cloud/centos-7"
+      image = data.google_compute_image.nginx.name
       type  = "pd-ssd"
       size  = "50"
     }
