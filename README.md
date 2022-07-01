@@ -124,3 +124,7 @@ Generate multiple resources based on a number variable count and conditionally c
 Configure a remote state bucket for the project.
 
 *(note: remote state bucket for this project was added in step 00)*
+
+### 11 - Running an application
+
+Run an auto-scaled load-balanced application all set up by Terraform.

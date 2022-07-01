@@ -1,12 +1,12 @@
 # Exercise 09
 
 variable "e09_object_count" {
-  type = number
+  type    = number
   default = 3
 }
 
 variable "include_optional_file" {
-  type = bool
+  type    = bool
   default = true
 }
 
