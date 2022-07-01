@@ -8,7 +8,8 @@ google_zone       = "europe-west4-b"
 
 google_project_apis = [
   "compute.googleapis.com",
-  "secretmanager.googleapis.com"
+  "secretmanager.googleapis.com",
+  "cloudasset.googleapis.com"
 ]
 
 google_project_metadata = {
