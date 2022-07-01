@@ -110,3 +110,7 @@ Try generating errors:
 - Syntax errors - modify the code to generate syntax errors
 - Validation errors - refer to an invalid resource
 - Provider errors - ex. write file to a bucket that does not exist
+
+### 08 - Data and Variables
+
+Work with variable types and to output data from them. Also try adding more outputs for specific or modified data.

@@ -58,6 +58,14 @@ variable "e08_my_map" {
   }
 }
 
+variable "e08_my_map_string" {
+  type = map(list(string))
+  default = {
+    names : ["John", "Susy", "Harold"],
+    ages : [12, 14, 10]
+  }
+}
+
 variable "e08_my_object" {
   type = object({
     names : list(string),
@@ -86,11 +94,23 @@ output "e08_my_tuple_values" {
 }
 
 output "e08_my_map_values" {
-  value = var.e08_my_map # the ability to do this without quotes is new in 0.12!
+  value = var.e08_my_map
+}
+
+output "e08_my_map_string_values" {
+  value = var.e08_my_map_string
 }
 
 output "e08_my_object_values" {
   value = var.e08_my_object
+}
+
+output "e08_my_object_names" {
+  value = var.e08_my_object["names"]
+}
+
+output "e08_my_object_first_name" {
+  value = var.e08_my_object["names"][0]
 }
 
 # other data
