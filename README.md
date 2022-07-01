@@ -118,3 +118,9 @@ Work with variable types and to output data from them. Also try adding more outp
 ### 09 - Resource Counts and Conditionals
 
 Generate multiple resources based on a number variable count and conditionally create a resource based on a boolean variable.
+
+### 10 - Backends and Remote State
+
+Configure a remote state bucket for the project.
+
+*(note: remote state bucket for this project was added in step 00)*
