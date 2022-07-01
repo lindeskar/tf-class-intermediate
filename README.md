@@ -114,3 +114,7 @@ Try generating errors:
 ### 08 - Data and Variables
 
 Work with variable types and to output data from them. Also try adding more outputs for specific or modified data.
+
+### 09 - Resource Counts and Conditionals
+
+Generate multiple resources based on a number variable count and conditionally create a resource based on a boolean variable.
